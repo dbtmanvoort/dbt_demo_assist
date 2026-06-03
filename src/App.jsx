@@ -225,12 +225,12 @@ function OrchestrationPage() {
         </div>
       </div>
 
-      {/* Phase 3: State-Aware Orchestration */}
+      {/* Phase 3: dbt state */}
       <div className="section-container py-4 pb-16">
         <div className="text-center mb-6">
           <div className="flex items-center justify-center gap-3 mb-2">
             <span className="text-base font-bold text-amber-700 bg-amber-50 border border-amber-200 px-4 py-1.5 rounded-full">Phase 3</span>
-            <h2 className="text-2xl font-bold text-gray-900">State-Aware Orchestration</h2>
+            <h2 className="text-2xl font-bold text-gray-900">dbt state</h2>
           </div>
           <p className="text-sm text-gray-500 mt-2">dbt can detect which sources have new data and only rebuild what's necessary.</p>
         </div>
@@ -262,7 +262,7 @@ export default function App() {
         <div className="section-container py-10 md:py-14 text-center">
           <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-              The dbt Interactive Guide
+              dbt demo assist
             </h1>
 
             {/* Top-level navigation tabs */}
