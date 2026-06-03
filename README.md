@@ -2,7 +2,7 @@
 
 An interactive educational website that walks through how dbt works, from architecture and models to development workflows and orchestration. Built for data professionals learning dbt.
 
-**Live site:** [dbtmanvoort.github.io/dbt_interactive_guide](https://dbtmanvoort.github.io/dbt_interactive_guide/)
+**Live site:** [dbtmanvoort.github.io/dbt_demo_assist](https://dbtmanvoort.github.io/dbt_demo_assist/)
 
 ## What's Inside
 
