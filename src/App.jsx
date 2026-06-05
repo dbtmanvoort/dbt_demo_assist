@@ -13,6 +13,9 @@ import DevelopmentWorkflow from './components/DevelopmentWorkflow'
 // Models components
 import DbtModels from './components/DbtModels'
 
+// Data Modeling components
+import DataModeling from './components/DataModeling'
+
 // Orchestration components
 import PreDbtOrchestration from './components/PreDbtOrchestration'
 import HowDbtWorks from './components/HowDbtWorks'
@@ -22,14 +25,19 @@ import SettingUpTests from './components/SettingUpTests'
 import DbtBuildSimulator from './components/DbtBuildSimulator'
 import StateAwareOrchestration from './components/StateAwareOrchestration'
 
+// Mesh components
+import DbtMesh from './components/DbtMesh'
+
 // Semantic Layer components
 import SemanticLayer from './components/SemanticLayer'
 
 const topTabs = [
   { key: 'architecture', label: 'Architecture & Environments' },
   { key: 'models', label: 'dbt Models' },
+  { key: 'modeling', label: 'Data Modeling' },
   { key: 'development', label: 'dbt Development Workflow' },
   { key: 'orchestration', label: 'dbt Orchestration' },
+  { key: 'mesh', label: 'dbt Mesh' },
   { key: 'semantic', label: 'dbt Semantic Layer' },
 ]
 
@@ -245,8 +253,10 @@ function OrchestrationPage() {
 const tabDescriptions = {
   architecture: 'How dbt connects Git, transformation logic, and your data platform.',
   models: 'What dbt models offer and why they change how you build data pipelines.',
+  modeling: 'The four layers of a well-structured dbt project: sources, staging, intermediate, and marts.',
   development: 'The end-to-end workflow from feature branch to production deployment.',
   orchestration: 'How dbt orchestration makes data pipelines simpler, faster, and cheaper.',
+  mesh: 'Scale from one project to many with governed model sharing, scoped lineage, and safe versioning.',
   semantic: 'A governed metrics layer that turns questions into correct SQL for LLMs, apps, and BI.',
 }
 
@@ -310,6 +320,11 @@ export default function App() {
             <DbtModels />
           </motion.div>
         )}
+        {activeTab === 'modeling' && (
+          <motion.div key="modeling" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+            <DataModeling />
+          </motion.div>
+        )}
         {activeTab === 'development' && (
           <motion.div key="dev" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
             <DevelopmentPage />
@@ -318,6 +333,11 @@ export default function App() {
         {activeTab === 'orchestration' && (
           <motion.div key="orch" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
             <OrchestrationPage />
+          </motion.div>
+        )}
+        {activeTab === 'mesh' && (
+          <motion.div key="mesh" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+            <DbtMesh />
           </motion.div>
         )}
         {activeTab === 'semantic' && (

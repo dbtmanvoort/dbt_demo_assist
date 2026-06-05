@@ -33,7 +33,7 @@ const edges = [
 
 const scenarios = {
   rebuild_all: {
-    label: 'Pre-state Default',
+    label: 'Without dbt State',
     desc: 'raw_orders gets new data, but all models rebuild regardless',
     steps: [
       { action: 'freshness', ids: ['raw_orders'], label: 'New data detected in raw_orders' },
@@ -49,7 +49,7 @@ const scenarios = {
     terminalType: 'warn',
   },
   source_aware: {
-    label: 'state Default',
+    label: 'With dbt State',
     desc: 'raw_orders gets new data. Only downstream models rebuild, unchanged models are reused.',
     steps: [
       { action: 'freshness', ids: ['raw_orders'], label: 'New data detected in raw_orders' },
